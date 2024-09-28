@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { NewUserComponent } from './components/new-user/new-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
 
 
 
@@ -31,7 +32,8 @@ function initializeKeycloak(keycloak: KeycloakService) {
   declarations: [
     AppComponent,
     HomeComponent,
-    NewUserComponent
+    NewUserComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,

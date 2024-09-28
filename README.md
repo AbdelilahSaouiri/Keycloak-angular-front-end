@@ -1,27 +1,34 @@
-# NgKeycloack
+# NgKeycloak
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
-## Development server
+## Project Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project implements security using Keycloak for authentication and authorization.
 
-## Code scaffolding
+### Backend
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The backend part is built with Spring Boot. You can find it here: [Backend Repository](https://github.com/AbdelilahSaouiri/keycloak-spring-boot.git).
 
-## Build
+## Screenshots
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Here are some screenshots of the application:
 
-## Running unit tests
+![Screenshot 1](./src/assets/images/Screenshot%202024-09-29%20041841.png)
+![Screenshot 2](./src/assets/images/Screenshot%202024-09-29%20042911.png)
+![Screenshot 3](./src/assets/images/Screenshot%202024-09-29%20043040.png)
+![Screenshot 4](./src/assets/images/Screenshot%202024-09-29%20043119.png)
+![Screenshot 5](./src/assets/images/Screenshot%202024-09-29%20043440.png)
+![Screenshot 6](./src/assets/images/Screenshot%202024-09-29%20043514.png)
+![Screenshot 7](./src/assets/images/Screenshot%202024-09-29%20044613.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Development Server
 
-## Running end-to-end tests
+Run `ng serve` for a development server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Getting Started
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:AbdelilahSaouiri/Keycloak-angular-front-end.git
+  ```

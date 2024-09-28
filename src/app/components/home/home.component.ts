@@ -3,6 +3,7 @@ import { UserService } from '../../services/user.service';
 import { SecurityService } from '../../services/security.service';
 import { KeycloakService } from 'keycloak-angular';
 import { Router } from '@angular/router';
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -11,11 +12,12 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-   profile:any
+    profile:any
     users:any;
+
   constructor(private userService:UserService,
     public sec:SecurityService,
-    private key:KeycloakService,
+    public key:KeycloakService,
      private router:Router){}
 
   ngOnInit(): void {
@@ -49,10 +51,25 @@ export class HomeComponent implements OnInit {
   }
 
   handleUpdate(user:any){
-    this.router.navigateByUrl(`/update/${user}`)
+    let id=user['userId'];
+    this.router.navigateByUrl( `/update/${id}`)
   }
 
   handleDeleteUser(user:any){
+    const cofirmDeleteUser=confirm("are you sure to delete this user")
+    if(cofirmDeleteUser)
+   {
+    this.userService.deleteUser(user).subscribe({
+      next:(resp:HttpResponse<any>)=>{
+       if(resp.status==204){
+        alert("User deleted with success")
+        this.getUsers()
+       }
+     },error:err=>{
+        console.log(err)
+     }
+  });
+   }
+}
 
-  }
 }
