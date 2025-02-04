@@ -6,6 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project implements security using Keycloak for authentication and authorization.
 
+
 ### Backend
 
 The backend part is built with Spring Boot. You can find it here: [Backend Repository](https://github.com/AbdelilahSaouiri/keycloak-spring-boot.git).
